@@ -10,9 +10,91 @@
     <string name="info_about_me">Информация обо мне :</string>
 
     <string-array name="my_infarmation">
-        <item>Roman Yakushev</item>
+        <item>My first name : Roman</item>
         <item>Skype : pegas_dll</item>
-        <item>+380993374555</item>
+        <item>My phome : +380993374555</item>
     </string-array>
 
+    <string name="information">Это приложение направлено для изучения, повторения или просто как сборник документации по разным аспектам Java программирования</string>
+    <string-array name="java_list">
+        <item>Язык программирования Java</item>
+        <item>Первая программа Java</item>
+        <item>Выбов среды для разработки</item>
+
+        <item>Структура программы</item>
+        <item>Переменные и константы</item>
+        <item>Типы данных</item>
+        <item>Консольный ввод/вывод</item>
+        <item>Арифметические операции</item>
+        <item>Побитовые операции</item>
+        <item>Условные выражения</item>
+        <item>Операции присваивания и приоритет операций</item>
+        <item>Преобразования базовых типов данных</item>
+        <item>Условные конструкции</item>
+        <item>Циклы</item>
+        <item>Массивы</item>
+        <item>Методы</item>
+        <item>Параметры методов</item>
+        <item>Оператор return. Результат метода</item>
+        <item>Перегрузка методов</item>
+        <item>Рекурсивные функции</item>
+        <item>Введение в обработку исключений</item>
+
+        <item>Классы и объекты</item>
+        <item>Пакеты</item>
+        <item>Модификаторы доступа и инкапсуляция</item>
+        <item>Статические члены и модификатор static</item>
+        <item>Объекты как параметры методов</item>
+        <item>Внутренние и вложенные классы</item>
+        <item>Наследование</item>
+        <item>Абстрактные классы</item>
+        <item>Иерархия наследования и преобразование типов</item>
+        <item>Интерфейсы</item>
+        <item>Интерфейсы в механизме обратного вызова</item>
+        <item>Перечисления enum</item>
+        <item>Класс Object и его методы</item>
+        <item>Обобщения (Generics)</item>
+        <item>Ограничения обобщений</item>
+        <item>Наследование и обобщения</item>
+        <item>Ссылочные типы и клонирование объектов</item>
+
+        <item>Типы коллекций. Интерфейс Collection</item>
+        <item>Класс ArrayList и интерфейс List</item>
+        <item>Очереди и класс ArrayDeque</item>
+        <item>Класс LinkedList</item>
+        <item>Интерфейс Set и класс HashSet</item>
+        <item>SortedSet, NavigableSet, TreeSet</item>
+        <item>Интерфейсы Comparable и Comporator. Сортировка</item>
+        <item>Интерфейс Map и класс HashMap</item>
+        <item>Интерфейсы SortedMap и NavigableMap. Класс TreeMap</item>
+        <item>Итераторы</item>
+
+        <item>Потоки ввода-вывода</item>
+        <item>Чтение и запись файлов. FileInputStream и FileOutputStream</item>
+        <item>Закрытие потоков</item>
+        <item>Классы ByteArrayInputStream и ByteArrayOutputStream</item>
+        <item>Буферизованные потоки BufferedInputStream и BufferedOutputStream</item>
+        <item>Форматируемый вывод. PrintStream и PrintWriter</item>
+        <item>Классы DataOutputStream и DataInputStream</item>
+        <item>Чтение и запись текстовых файлов</item>
+        <item>Буферизация символьных потоков. BufferedReader и BufferedWriter</item>
+        <item>Сериализация объектов</item>
+        <item>Класс File. Работа с файлами и каталогами</item>
+        <item>Работа с ZIP-архивами</item>
+        <item>Класс Console</item>
+
+        <item>Введение в строки. Класс String</item>
+        <item>Основные операции со строками</item>
+        <item>StringBuffer и StringBuilder</item>
+        <item>Регулярные выражения</item>
+
+
+
+
+
+
+
+
+
+    </string-array>
 </resources>

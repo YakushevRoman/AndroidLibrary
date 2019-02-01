@@ -13,10 +13,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    ListView listView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +28,8 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        createMainList();
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -42,6 +48,16 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+    }
+
+    private void createMainList() {
+        listView = findViewById(R.id.main_list);
+
+        ArrayAdapter<String> mainList = new ArrayAdapter<String>(
+                this,
+                android.R.layout.simple_list_item_1,
+                getResources().getStringArray(R.array.java_list));
+        listView.setAdapter(mainList);
     }
 
     @Override
@@ -83,7 +99,7 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_java_file) {
-
+            createMainList();
             Toast.makeText(this, "nav_java_file", Toast.LENGTH_SHORT).show();
 
         } else if (id == R.id.nav_android_file) {
@@ -91,11 +107,12 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_manage) {
 
         } else if (id == R.id.nav_information) {
-            Intent intent = new Intent(this, Information.class);
+            Intent intent = new Intent(this, Informations.class);
             startActivity(intent);
 
         } else if (id == R.id.nav_contacts) {
-
+            Intent intent = new Intent(this, Contacts.class);
+            startActivity(intent);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
