@@ -21,7 +21,7 @@ public class Contacts extends AppCompatActivity {
                 android.R.layout.simple_list_item_1,
                 list_info);
 
-        listView.setAdapter(stringArrayAdapter);
+        //listView.setAdapter(stringArrayAdapter);
 
     }
 }

@@ -2,8 +2,14 @@ package com.example.user301.androidlibrary;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -13,15 +19,21 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     ListView listView;
-
+    RecyclerView rRecyclerView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,7 +41,6 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        createMainList();
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -50,15 +61,6 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
     }
 
-    private void createMainList() {
-        listView = findViewById(R.id.main_list);
-
-        ArrayAdapter<String> mainList = new ArrayAdapter<String>(
-                this,
-                android.R.layout.simple_list_item_1,
-                getResources().getStringArray(R.array.java_list));
-        listView.setAdapter(mainList);
-    }
 
     @Override
     public void onBackPressed() {
@@ -96,15 +98,31 @@ public class MainActivity extends AppCompatActivity
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
+        Fragment rManageFragment;
         int id = item.getItemId();
 
         if (id == R.id.nav_java_file) {
-            createMainList();
-            Toast.makeText(this, "nav_java_file", Toast.LENGTH_SHORT).show();
+            FragmentManager fragmentManagerJavaList = getSupportFragmentManager();
+            rManageFragment = fragmentManagerJavaList .findFragmentById(R.id.fragment_container);
+            if (rManageFragment == null){
+                rManageFragment = new JavaFragment();
+                fragmentManagerJavaList .beginTransaction()
+                        .add(R.id.fragment_container, rManageFragment)
+                        .commit();
 
         } else if (id == R.id.nav_android_file) {
 
+
+
         } else if (id == R.id.nav_manage) {
+            FragmentManager fragmentManagerManage = getSupportFragmentManager();
+            rManageFragment = fragmentManagerManage.findFragmentById(R.id.fragment_container);
+            if (rManageFragment == null){
+                rManageFragment = new ManageFragment();
+                fragmentManagerManage.beginTransaction()
+                        .add(R.id.fragment_container, rManageFragment)
+                        .commit();
+            }
 
         } else if (id == R.id.nav_information) {
             Intent intent = new Intent(this, Informations.class);
@@ -118,5 +136,10 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
     }
 }
