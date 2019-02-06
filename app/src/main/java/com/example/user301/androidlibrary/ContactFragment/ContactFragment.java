@@ -23,6 +23,12 @@ public class ContactFragment extends Fragment {
     private ContactsAdapter rContactsAdapter;
     private RecyclerView rContactsRecyclerView;
 
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setRetainInstance(true);
+    }
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {

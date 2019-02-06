@@ -91,28 +91,32 @@
         <item>Введение в лямбда-выражения</item>
         <item>Лямбды как параметры и результаты методов</item>
         <item>Встроенные функциональные интерфейсы</item>
+    </string-array>
 
-        <item>Введение в лямбда-выражения</item>
-        <item>Введение в лямбда-выражения</item>
-        <item>Введение в лямбда-выражения</item>
-        <item>Введение в лямбда-выражения</item>
-        <item>Введение в лямбда-выражения</item>
-        <item>Введение в лямбда-выражения</item>
-        <item>Введение в лямбда-выражения</item>
-        <item>Введение в лямбда-выражения</item>
-        <item>Введение в лямбда-выражения</item>
-        <item>Введение в лямбда-выражения</item>
+    <string-array name="android_list">
+        <item>Введение в платформу Android</item>
+        <item>Настройка Android SDK</item>
+        <item>Android Studio и создание первого проекта</item>
+        <item>Первое приложение</item>
+        <item>Класс Activity и ресурсы</item>
+        <item>Создание графического приложения</item>
+        <item>Запуск второй Activity</item>
 
-
-
-
-
-
-
-
-
-
-
-
+        <item>Введение в создание интерфейса</item>
+        <item>Определение интерфейса в файле XML. Файлы layout</item>
+        <item>Графические возможности Android Studio</item>
+        <item>Определение размеров</item>
+        <item>Ширина и высота элементов</item>
+        <item>Внутренние и внешние отступы</item>
+        <item>LinearLayout</item>
+        <item>RelativeLayout</item>
+        <item>Gravity и layout_gravity</item>
+        <item>TableLayout</item>
+        <item>FrameLayout</item>
+        <item>GridLayout</item>
+        <item>ConstraintLayout</item>
+        <item>ScrollView</item>
+        <item>Вложенные layout</item>
     </string-array>
 </resources>
+

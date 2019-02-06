@@ -13,10 +13,6 @@
             android:id="@+id/nav_android_file"
             android:icon="@drawable/ic_android_black_24dp"
             android:title="Android Core" />
-        <item
-            android:id="@+id/nav_manage"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="Tools" />
     </group>
 
     <item android:title="Communicate">

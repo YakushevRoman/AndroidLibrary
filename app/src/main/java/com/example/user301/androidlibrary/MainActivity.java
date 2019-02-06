@@ -16,6 +16,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.example.user301.androidlibrary.AndroidFragment.AndroidFragment;
 import com.example.user301.androidlibrary.ContactFragment.ContactFragment;
 import com.example.user301.androidlibrary.InformationsFragment.InformationFragment;
 import com.example.user301.androidlibrary.JavaFragment.JavaFragment;
@@ -117,21 +118,8 @@ public class MainActivity extends AppCompatActivity
             rFragment = fragmentManagerAndroidList
                     .findFragmentById(R.id.fragment_container);
             if (rFragment != null) {
-                rFragment = new ContactFragment();
+                rFragment = new AndroidFragment();
                 fragmentManagerAndroidList
-                        .beginTransaction()
-                        .replace(R.id.fragment_container, rFragment)
-                        .commit();
-            }
-
-        } else
-            if (id == R.id.nav_manage) {
-            FragmentManager fragmentManagerManage = getSupportFragmentManager();
-            rFragment = fragmentManagerManage
-                    .findFragmentById(R.id.fragment_container);
-            if (rFragment != null){
-                rFragment = new ContactFragment();
-                fragmentManagerManage
                         .beginTransaction()
                         .replace(R.id.fragment_container, rFragment)
                         .commit();
